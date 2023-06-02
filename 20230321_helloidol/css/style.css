@@ -1,0 +1,50 @@
+/*h1과h2 plum배경색*/
+h1,h2{
+    /*background-color: plum;*/
+}
+/*h1자매 중 첫번째 h2만 plum배경색*/
+h1+h2{
+    /*background-color: plum;*/
+}
+h1~h2{ /* h1 에는 적용이 안됨 !!!!!!! 시험문제 낼거임 !1111111111111111111111111111*/
+    background-color: plum;
+}
+ul,
+ol{
+   /* color: #333; 이것도 !!!!!!!!!!!!!!!!!중요
+    font-size: 32px;
+    */
+}
+ul{
+color: #333;
+font-size: 32px;
+}
+.korea{
+    color: skyblue;
+}
+.japan{
+    color: crimson;
+}
+.incheon{
+    color: darkblue;
+}
+.leader{
+    color: blueviolet;
+}
+li:nth-child(5){
+    text-decoration: underline;
+}
+/*짝수행 적용, 홀수행 : odd*/
+li:nth-child(even){
+    background-color: #eee;
+}
+/*5의 배수 행*/
+li:nth-child(5n){/*그냥 5는 하나만 5n은 쭉~~*/
+background-color: #aaa;
+}
+[type="text"]{
+    background-color: aqua;
+}
+ul:nth-child(2)> li:nth-child(2){
+    text-decoration: overline;/*윗줄*/
+}

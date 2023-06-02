@@ -1,0 +1,8 @@
+.bi-list {
+    font-size: 10rem;       /* 1rem == 16px == 대문자 M의 너비 rem은 상대단위 px는 절대단위*/
+    color: palevioletred;
+}
+.bi-plus-lg {
+    font-size: 200px;
+    color: aqua;
+}
