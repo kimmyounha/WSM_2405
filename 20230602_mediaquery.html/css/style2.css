@@ -1,0 +1,19 @@
+/*3단계의 동작을 min-width 를 써서 만드세요*/
+/*desktop: aqua 721px~*/
+/*tablet: pink*/
+/*mobile: palevioletred*/
+
+    body{
+        background-color: palevioletred;
+    }
+    
+@media screen and (min-width: 541px) {
+    body{
+        background-color: pink;
+    }
+}
+@media screen and (min-width: 720px) {
+    body{
+        background-color: aqua;
+    }
+}
