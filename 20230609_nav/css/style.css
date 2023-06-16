@@ -101,6 +101,9 @@ nav {
     }
 
     /*show-menu하면, .nav-list보이게*/
+    .show-menu{
+      height: 156px;
+    }
     /*show-menu하면, .nav-toggle 버튼 x로*/
     
 }
