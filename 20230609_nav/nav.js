@@ -15,7 +15,7 @@ const navListUl = document.getElementsByClassName("nav-list")[0];
 //2. Event Hendling
 //햄버거 메뉴 클릭하면, 햄버거메뉴 i "bi bi-list"를 x "bi bi-x-lg"로 
 //햄버거 메뉴 클랙하면, .nav-list에 .show-menu 보여주기 <-> 안보여주기
-nav_toggle.onclick = () =>alert("Holymoly");//ok
+nav_toggle.onclick = () =>alert("김윤하이올시다");//ok
 //nav_toggle.onclick = alert("안녕"); //not ok
 //-----------------------------------
 //HTML -> js
