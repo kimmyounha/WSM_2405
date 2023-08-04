@@ -1,23 +1,54 @@
-main {
-    margin-top: calc(44px + 100px);
+main{
+    margin-top: calc(44px + 100px); /* calc 에 연산자 사이에 띄어쓰기 해야함 */
 }
-main div {
+.container{
+    display: flex;
+}
+.image-info-groups{
+    /* flex-wrap: wrap; 태블릿 너비 일때 info-groups전체가 먼저 wrap돼버려서 주석처리  */
+}
+.info-groups{
+    flex-wrap: wrap;
+}
+.info-group{
+    flex-direction: column;
+}
+.info{
+    flex-direction: column;
+}
+.reviews{
+    flex-direction: column;
+}
+.review{
+
+    flex-direction: column;
+}
+
+@media screen and (max-width: 540px) {
+    .image-info-groups{
+        flex-direction: column;
+    }
+    
+}
+main div{
     border: 2px solid black;
 }
-.review {
-    display: flex;
-    flex-direction: column;
-}
-.row-container {
-    display: flex;
-}
-.row-container:nth-child(2) {
-    flex-direction: column;
-}
-.book {
+
+.book-image{
+    background-color: antiquewhite;
+    min-width: 200px;
     width: 200px;
     height: 400px;
 }
-.explain {
-    display: flex;
+.info{
+    background-color: tomato;
+    width: 200px;
+    height: 100px;
+
 }
+.review{
+    background-color: cadetblue;
+    height: 100px;
+}
+
+
