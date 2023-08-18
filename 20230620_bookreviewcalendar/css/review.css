@@ -1,54 +1,80 @@
 main{
+    margin: 0 auto;
     margin-top: calc(44px + 100px); /* calc 에 연산자 사이에 띄어쓰기 해야함 */
+    width: calc(100% - 100px * 2); /*연산자 옆에 띄어쓰기 있어야 함 시험문제 !!!!!!!!*/
 }
-.container{
+.container {
     display: flex;
 }
-.image-info-groups{
-    /* flex-wrap: wrap; 태블릿 너비 일때 info-groups전체가 먼저 wrap돼버려서 주석처리  */
+.image-info-groups {
+    /* flex-wrap: wrap;     태블릿 너비일때 info-groups 전체가 먼저 wrap 돼버려서 주석 처리 */
 }
-.info-groups{
+.info-groups {
     flex-wrap: wrap;
+    margin: 0 40px;
+    gap: 40px;
 }
-.info-group{
+.info-group {
     flex-direction: column;
+    gap: 40px;
 }
-.info{
-    flex-direction: column;
-}
-.reviews{
-    flex-direction: column;
-}
-.review{
 
+.info {
+    flex-direction: column;
+}
+
+.title,
+.author,
+.publisher,
+.read-date,
+.synopsis,
+.phrase {
+    font-size: 1.25rem;
+}
+.label {
+    color: #999;
+}
+.synopsis > input,
+.phrase > input {
+    width: 100%;
+    height: 2rem;
+}
+
+.reviews {
+    flex-direction: column;
+    margin: 40px 0;
+    gap: 40px;
+}
+.review {
     flex-direction: column;
 }
 
 @media screen and (max-width: 540px) {
-    .image-info-groups{
+    main {
+        margin-top: calc(44px + 40px);
+    }
+    .image-info-groups {
         flex-direction: column;
     }
-    
+    .book-image { 
+        margin: 0 auto;     /* 이미지가 있는 div 가운데로 */
+    }
+    .info-groups {
+        flex-direction: column;
+        margin: 40px 0 0;
+    }
 }
-main div{
+
+
+
+/* delete me */
+/* main div {
     border: 2px solid black;
-}
-
-.book-image{
-    background-color: antiquewhite;
-    min-width: 200px;
+} */
+.book-image {
     width: 200px;
-    height: 400px;
+    min-width: 200px;   /* 이미지 너비가 자동으로 줄어드는 문제 해결 */
 }
-.info{
-    background-color: tomato;
-    width: 200px;
-    height: 100px;
-
+.book-image > img {
+    display: block;     /* 이미지 아래 살짝 하얀 여백 생기는 문제 해결 */
 }
-.review{
-    background-color: cadetblue;
-    height: 100px;
-}
-
-
