@@ -13,13 +13,26 @@ main{
     flex-wrap: wrap;
     margin: 0 40px;
     gap: 40px;
+    min-width: 200px;/*... 빌드*/
 }
-.info-group {
+
+.info-group{
     flex-direction: column;
     gap: 40px;
+    overflow: hidden;/*... 빌드*/
 }
 
 .info {
+    flex-direction: column;
+}
+
+.reviews {
+    flex-direction: column;
+    margin: 40px 0;
+    gap: 40px;
+}
+
+.review {
     flex-direction: column;
 }
 
@@ -30,23 +43,32 @@ main{
 .synopsis,
 .phrase {
     font-size: 1.25rem;
+    white-space: nowrap;    /*...만들기 위한 빌드*/
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
 .label {
-    color: #999;
+    color: darkblue;
 }
+
 .synopsis > input,
 .phrase > input {
     width: 100%;
     height: 2rem;
 }
 
-.reviews {
-    flex-direction: column;
-    margin: 40px 0;
-    gap: 40px;
+/* main div{
+    border: 2px solid black;
+} */
+
+.book-image{
+    width: 200px;
+    min-width: 200px;       /*이미지 너비가 자동으로 줄어드는 문제 해결하기 위한 조치*/
 }
-.review {
-    flex-direction: column;
+
+.book-image > img{
+    display: block; /*이미지 아래 여백 생기는 형상 해결*/
 }
 
 @media screen and (max-width: 540px) {
@@ -56,25 +78,13 @@ main{
     .image-info-groups {
         flex-direction: column;
     }
-    .book-image { 
-        margin: 0 auto;     /* 이미지가 있는 div 가운데로 */
+
+    .book-image {
+        margin: 0 auto;
     }
-    .info-groups {
+
+    .info-groups{
         flex-direction: column;
         margin: 40px 0 0;
     }
-}
-
-
-
-/* delete me */
-/* main div {
-    border: 2px solid black;
-} */
-.book-image {
-    width: 200px;
-    min-width: 200px;   /* 이미지 너비가 자동으로 줄어드는 문제 해결 */
-}
-.book-image > img {
-    display: block;     /* 이미지 아래 살짝 하얀 여백 생기는 문제 해결 */
 }
