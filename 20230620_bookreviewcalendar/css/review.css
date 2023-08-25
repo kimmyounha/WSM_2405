@@ -69,6 +69,12 @@ main{
 
 .book-image > img{
     display: block; /*이미지 아래 여백 생기는 형상 해결*/
+    border-radius: 8px;
+    box-shadow: 0 16px 32px #aaa;
+}
+
+.book-image > img:hover{
+    transform: perspective(400px) rotateY(20deg);
 }
 
 @media screen and (max-width: 540px) {
