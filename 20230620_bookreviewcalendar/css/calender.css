@@ -40,6 +40,12 @@ main {
     background-color: aquamarine;
     grid-column-start: 6; 
 }
+.date.item:nth-child(7n+2){
+    color: blue;
+}
+.date.item:nth-child(7n+3){
+    color: red;
+}
 
 .review.flex-container {
     display: flex;
