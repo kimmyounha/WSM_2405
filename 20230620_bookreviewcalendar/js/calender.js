@@ -1,32 +1,69 @@
+// > 이후달
+// < 이전달
+
+
+// var thisMonthLastDate;
+
+// // 현재 날짜를 얻습니다.
+// var currentDate = new Date();
+
+// // 다음 달로 이동하여 이번 달의 마지막 날짜를 구합니다.
+// currentDate.setMonth(currentDate.getMonth() + 1);
+// currentDate.setDate(0);
+
+// // thisMonthLastDate에 마지막 날짜를 할당합니다.
+// thisMonthLastDate = currentDate.getDate();
+
+// console.log(thisMonthLastDate);
+
+
+// var thisMonthFirstDate = 1;
+// var thisMonthFirstDay;
+
+// // 현재 날짜를 얻습니다.
+// var currentDate = new Date();
+
+// // 현재 날짜를 이번 달의 첫 번째 날짜로 설정합니다.
+// currentDate.setDate(thisMonthFirstDate);
+
+// // 요일을 얻습니다 (0은 일요일, 1은 월요일, ..., 6은 토요일을 나타냅니다).
+// thisMonthFirstDay = currentDate.getDay();
+
+// console.log(thisMonthFirstDay);
+
+
 var now = new Date();
 var year = now.getFullYear();
 var month = now.getMonth() + 1;
 
-// < : 이전달
-// > : 이후달
-// month += 1;
+const datesContainerDiv = document.getElementsByClassName("dates container")[0];
+
 
 const setCalendar = (year, month) => {
-    //현재 월 제목에 표시하자
-    //html -> js
+
     var titleMonthDiv = document.getElementsByClassName("month")[0];
 
-    // = `${month월}`;
     titleMonthDiv.innerHTML = `${month}월`;
-    
-    // 1~해당 월의 마지막 날짜 까지 날짜 div만들기
-    //해당 월의 마지막날
-    var thisMonthLastDate = new Date(year,  month + 1 - 1, 0).getDate();  //전달 마지막 날
-    for (var date = 1; date <= thisMonthLastDate; date++ ) {
-        let dateItemDiv = document.createElement("div");
-        console.log(date);
-    }
-   
-    console.log(thisMonthLastDate);
+    //현재 월 제목에 표시하자 html => js로 옮기기
 
-    
-    //해당 월의 1일 요일
-    var thisMonthFirstDay = new Date(year, month - 1, 1).getDay(); //0: sum, 1: mon, 2: tue, 3: wed, 4: the, 5: fri, 6: sat 
-    console.log(thisMonthFirstDay);
+    var thisMonthLastDate = new Date(year, month + 1 - 1, 0).getDate();
+   
+    for(var date = 1; date <= thisMonthLastDate; date++){
+     
+        let dateItemDiv = document.createElement("div");
+        dateItemDiv.classList.add = ("date");
+        dateItemDiv.classList.add = ("item");
+        dateItemDiv.innerHTML = date;
+     
+        datesContainerDiv.appendChild(dateItemDiv);
+    }
+
+
+    var thisMonthFirstDay = new Date(year, month - 1, 1).getDay();
+
+    console.log(thisMonthLastDate, thisMonthFirstDay)
+
+
 }
-setCalendar(year,month);
+
+setCalendar(year, month);
